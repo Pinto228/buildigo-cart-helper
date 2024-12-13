@@ -16,9 +16,21 @@ const Register = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">
-              Full Name
+              Имя
             </label>
             <Input type="text" id="name" required />
+          </div>
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium mb-2">
+              Фимилия
+            </label>
+            <Input type="text" id="lastName" required />
+          </div>
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium mb-2">
+              Дата рождения
+            </label>
+            <Input type="text" id="dateOfBirth" required />
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
@@ -28,7 +40,7 @@ const Register = () => {
           </div>
           <div>
             <label htmlFor="password" className="block text-sm font-medium mb-2">
-              Password
+              Пароль
             </label>
             <Input type="password" id="password" required />
           </div>
@@ -37,18 +49,18 @@ const Register = () => {
               htmlFor="confirmPassword"
               className="block text-sm font-medium mb-2"
             >
-              Confirm Password
+              Подтвердить пароль
             </label>
             <Input type="password" id="confirmPassword" required />
           </div>
           <Button type="submit" className="w-full">
-            Register
+            Зарегистрироваться
           </Button>
         </form>
         <p className="mt-4 text-center text-sm">
-          Already have an account?{" "}
+          Уже есть аккаунт?{" "}
           <Link to="/login" className="text-accent hover:underline">
-            Login here
+            Вход
           </Link>
         </p>
       </div>

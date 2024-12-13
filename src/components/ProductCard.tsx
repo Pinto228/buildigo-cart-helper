@@ -6,6 +6,7 @@ interface ProductCardProps {
   product: Product;
 }
 
+
 export function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
 
@@ -18,19 +19,18 @@ export function ProductCard({ product }: ProductCardProps) {
           className="w-full h-48 object-cover"
         />
       </Link>
-      <div className="p-4">
+      <div className="p-4 flex-grow" >
         <Link to={`/product/${product.id}`}>
           <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
         </Link>
-        <p className="text-gray-600 mb-4">${product.price.toFixed(2)}</p>
+        <p className="text-gray-600 mb-4">₽{product.price.toFixed(2)}</p>
         <Button
           onClick={() => {
             addToCart(product);
             console.log("Added to cart:", product.name);
           }}
-          className="w-full"
-        >
-          Add to Cart
+          className="w-full">
+          Добавить в заказ
         </Button>
       </div>
     </div>

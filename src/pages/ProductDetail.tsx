@@ -13,7 +13,7 @@ const ProductDetail = () => {
     price: 12.99,
     description:
       "High-quality cement perfect for construction projects. This premium grade cement ensures durability and strength in all your building needs.",
-    image: "/placeholder.svg",
+    image: "https://кирпич.com/upload/iblock/c70/qh1q3gth34do23lchu7yema68ga4yah9.jpg",
     category: "Cement",
     specifications: [
       "Weight: 50kg",
@@ -35,10 +35,10 @@ const ProductDetail = () => {
         </div>
         <div>
           <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
-          <p className="text-2xl font-semibold mb-4">${product.price}</p>
+          <p className="text-2xl font-semibold mb-4">₽{product.price}</p>
           <p className="text-gray-600 mb-6">{product.description}</p>
           <div className="mb-6">
-            <h2 className="text-xl font-semibold mb-2">Specifications</h2>
+            <h2 className="text-xl font-semibold mb-2">Характеристики</h2>
             <ul className="list-disc list-inside space-y-2">
               {product.specifications.map((spec, index) => (
                 <li key={index} className="text-gray-600">
@@ -54,7 +54,7 @@ const ProductDetail = () => {
             }}
             className="w-full md:w-auto"
           >
-            Add to Cart
+            Добавить в заказ
           </Button>
         </div>
       </div>

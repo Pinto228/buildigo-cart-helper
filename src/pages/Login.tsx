@@ -12,7 +12,7 @@ const Login = () => {
   return (
     <div className="container mx-auto py-8">
       <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
-        <h1 className="text-2xl font-bold mb-6">Login</h1>
+        <h1 className="text-2xl font-bold mb-6">Вход</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
@@ -22,7 +22,7 @@ const Login = () => {
           </div>
           <div>
             <label htmlFor="password" className="block text-sm font-medium mb-2">
-              Password
+              Пароль
             </label>
             <Input type="password" id="password" required />
           </div>
@@ -31,9 +31,9 @@ const Login = () => {
           </Button>
         </form>
         <p className="mt-4 text-center text-sm">
-          Don't have an account?{" "}
+          Ещё нет аккаунта?{" "}
           <Link to="/register" className="text-accent hover:underline">
-            Register here
+            Регистрация
           </Link>
         </p>
       </div>

@@ -8,15 +8,15 @@ const Cart = () => {
   if (items.length === 0) {
     return (
       <div className="container mx-auto py-8 text-center">
-        <h1 className="text-2xl font-bold mb-4">Your Cart is Empty</h1>
-        <p className="text-gray-600">Start shopping to add items to your cart!</p>
+        <h1 className="text-2xl font-bold mb-4">Корзина пуста</h1>
+        <p className="text-gray-600">Начните покупки чтобы заполнить карзину!</p>
       </div>
     );
   }
 
   return (
     <div className="container mx-auto py-8">
-      <h1 className="text-2xl font-bold mb-8">Shopping Cart</h1>
+      <h1 className="text-2xl font-bold mb-8">Корзина</h1>
       <div className="bg-white rounded-lg shadow-md p-6">
         {items.map((item) => (
           <div
@@ -32,7 +32,7 @@ const Cart = () => {
               <div>
                 <h3 className="font-semibold">{item.product.name}</h3>
                 <p className="text-gray-600">
-                  ${item.product.price.toFixed(2)} each
+                  ₽{item.product.price.toFixed(2)} Каждый
                 </p>
               </div>
             </div>
@@ -70,9 +70,9 @@ const Cart = () => {
         ))}
         <div className="mt-6 text-right">
           <p className="text-lg font-semibold">
-            Total: ${total.toFixed(2)}
+            Общая стоимость: ₽{total.toFixed(2)}
           </p>
-          <Button className="mt-4">Proceed to Checkout</Button>
+          <Button className="mt-4">Перейти к оформлению заказа</Button>
         </div>
       </div>
     </div>
