@@ -2,13 +2,10 @@ import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
 
-const ProductDetail = () => {
-  const { id } = useParams();
-  const { addToCart } = useCart();
-
-  // Mock data - replace with actual API call later
-  const product = {
-    id: id || "1",
+// Массив с данными продуктов (в реальном приложении это должно быть API)
+const products = [
+  {
+    id: "1",
     name: "Premium Cement",
     price: 12.99,
     description:
@@ -21,7 +18,47 @@ const ProductDetail = () => {
       "Setting Time: 45 minutes",
       "Strength: High",
     ],
-  };
+  },
+  {
+    id: "2",
+    name: "Steel Rebar",
+    price: 24.99,
+    description:
+      "Professional-grade steel rebar for reinforced concrete structures. Ensures maximum strength and durability in construction projects.",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    category: "Steel",
+    specifications: [
+      "Length: 6m",
+      "Diameter: 12mm",
+      "Grade: B500B",
+      "Yield Strength: 500 MPa",
+    ],
+  },
+  {
+    id: "3",
+    name: "Bricks",
+    price: 0.99,
+    description:
+      "High-quality clay bricks perfect for all construction needs. These bricks offer excellent durability and aesthetic appeal.",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    category: "Bricks",
+    specifications: [
+      "Size: 215x102.5x65mm",
+      "Material: Clay",
+      "Compressive Strength: 20 N/mm²",
+      "Water Absorption: <12%",
+    ],
+  },
+];
+
+const ProductDetail = () => {
+  const { id } = useParams();
+  const { addToCart } = useCart();
+
+  // Находим продукт по id из URL
+  const product = products.find((p) => p.id === id) || products[0];
+
+  console.log("Showing details for product:", product.name);
 
   return (
     <div className="container mx-auto py-8">
