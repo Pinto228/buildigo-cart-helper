@@ -1,12 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { ProductCard } from "@/components/ProductCard";
+
+// Mock data - replace with actual API call later
+const products = [
+  {
+    id: "1",
+    name: "Premium Cement",
+    price: 12.99,
+    description: "High-quality cement for construction projects",
+    image: "/placeholder.svg",
+    category: "Cement",
+  },
+  {
+    id: "2",
+    name: "Steel Rebar",
+    price: 24.99,
+    description: "Reinforced steel bars for concrete structures",
+    image: "/placeholder.svg",
+    category: "Steel",
+  },
+  {
+    id: "3",
+    name: "Bricks",
+    price: 0.99,
+    description: "Standard red clay bricks",
+    image: "/placeholder.svg",
+    category: "Bricks",
+  },
+  // Add more products as needed
+];
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="container mx-auto py-8">
+      <section className="mb-12">
+        <h1 className="text-4xl font-bold mb-8">Building Materials</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
