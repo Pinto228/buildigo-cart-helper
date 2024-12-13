@@ -7,7 +7,7 @@ const products = [
     name: "Premium Cement",
     price: 12.99,
     description: "High-quality cement for construction projects",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
     category: "Cement",
   },
   {
@@ -15,7 +15,7 @@ const products = [
     name: "Steel Rebar",
     price: 24.99,
     description: "Reinforced steel bars for concrete structures",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     category: "Steel",
   },
   {
@@ -23,10 +23,9 @@ const products = [
     name: "Bricks",
     price: 0.99,
     description: "Standard red clay bricks",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     category: "Bricks",
   },
-  // Add more products as needed
 ];
 
 const Index = () => {

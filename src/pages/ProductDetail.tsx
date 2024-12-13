@@ -13,7 +13,7 @@ const ProductDetail = () => {
     price: 12.99,
     description:
       "High-quality cement perfect for construction projects. This premium grade cement ensures durability and strength in all your building needs.",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
     category: "Cement",
     specifications: [
       "Weight: 50kg",
